@@ -1,17 +1,17 @@
 
-const native = function (source, version, wp) {
-    this.config = {
-        source: source,
-        wp: wp,
-        version: version
-    }
-    this.navigatior = new nav(this.config);
-}
-
-native.prototype.config = {
+var native_config = {
     source: -1,
     wp: -1,
     version: -1
+}
+
+var native = function (source, version, wp) {
+    native_config = {
+        source: source,
+        wp: wp,
+        version: version
+    },
+    this.navigatior = new nav();
 }
 
 native.prototype.navigatior = null;

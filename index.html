@@ -27,28 +27,28 @@
 <script type="text/javascript" src="native.js"></script>
 <script>new VConsole();</script>
 <script>
-    var navive = new native(0, 1009, 1008);
+    var native = new native(0, 1009, 1008);
 </script>
 <!--navigatior-->
 <script>
     function pop() {
-        navive.navigatior.pop()
+        native.navigatior.pop()
     }
 
     function pop(value) {
-        navive.navigatior.pop(value)
+        native.navigatior.pop(value)
     }
 
     function pop(value) {
-        navive.navigatior.pop(value)
+        native.navigatior.pop(value)
     }
 
     function show(isRemoveSelf) {
-        navive.navigatior.show('sp://home/home',{isRemoveSelf: isRemoveSelf})
+        native.navigatior.show('sp://home/home',{isRemoveSelf: isRemoveSelf})
     }
 
     function backlist() {
-        navive.navigatior.backList(function (res) {
+        native.navigatior.backList(function (res) {
             alert(res)
         })
     }
