@@ -5,7 +5,7 @@ const native = function (source, version, wp) {
         wp: wp,
         version: version
     }
-    return this
+    this.navigatior = new nav(this.config);
 }
 
 native.prototype.config = {
@@ -14,7 +14,7 @@ native.prototype.config = {
     version: -1
 }
 
-native.prototype.navigatior = new nav(this.config);
+native.prototype.navigatior = null;
 // native.prototype.network = network;
 // native.prototype.cache = cache;
 // native.prototype.web = web;
