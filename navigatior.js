@@ -3,7 +3,7 @@ var nav = function () {};
 nav.prototype.post_for_1 = function (name,body) {
     if (!(native_config.source == 0 || native_config.source == -1)) { return }
     if (native_config.source == 0) {
-        window.webkit.messageHandlers.name.postMessage(body);
+        eval('window.webkit.messageHandlers.' + name + '.postMessage(' + body + ');')
     } else {
         myWeb.postMessage(name, JSON.stringify(body));
     }
