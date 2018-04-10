@@ -23,19 +23,19 @@
 </script>
 <script type="text/javascript" src="NativeHandle.js"></script>
 <script type="text/javascript" src="navigatior.js"></script>
+<script type="text/javascript" src="native.js"></script>
 <script>new VConsole();</script>
 <script>
-    var nav = new nav({
+    var navive = new native({
         wp: 2001,
         version: 1009,
         source: 0
     })
-
-    function pop() {
-        nav.pop()
-    }
 </script>
 
+<div class="btn" onclick="function pop() {
+  navive.navigatior.pop()
+}">pop</div>
 <div class="btn" onclick="pop()">pop</div>
 
 

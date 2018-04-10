@@ -15,7 +15,7 @@ native.prototype.config = {
 }
 
 native.prototype.navigatior = new nav(this.config);
-native.prototype.network = network;
-native.prototype.cache = cache;
-native.prototype.web = web;
-native.prototype.app = app;
+// native.prototype.network = network;
+// native.prototype.cache = cache;
+// native.prototype.web = web;
+// native.prototype.app = app;
