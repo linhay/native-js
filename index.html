@@ -25,15 +25,15 @@
 <script type="text/javascript" src="navigatior.js"></script>
 <script>new VConsole();</script>
 <script>
-    function pop() {
-        var nav = new nav({
-            wp: 2001,
-            version: 1009,
-            source: 0
-        })
-    }
+    var nav = new nav({
+        wp: 2001,
+        version: 1009,
+        source: 0
+    })
 
-    nav.pop()
+    function pop() {
+        nav.pop()
+    }
 </script>
 
 <div class="btn" onclick="pop()">pop</div>
