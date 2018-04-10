@@ -14,10 +14,11 @@ nav.prototype.post_for_1 = function (name,body) {
 nav.prototype.pop = function (value) {
     function special(index) {
         if (native_config.source == 0) {
-            this.post_for_1('execute','sp://tabbar/selectIndex?index=' + index);
-            var data = {}
+            var data = {};
+            data.url = 'sp://tabbar/selectIndex?index=' + index;
+            this.post_for_1('execute',data);
             data.vcName = 'tabbar';
-            this.post_for_1('pop',data)
+            this.post_for_1('pop',data);
         } else {
             this.post_for_1('push','sp:/myProfile/myProfile')
         }
