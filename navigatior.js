@@ -40,6 +40,14 @@ nav.prototype.backList = function (cb) {
 }
 
 //跳转至app页面列表
-nav.prototype.show = function (params, cb) {
-    Native.post('sp://navigatior/show', params, cb)
+nav.prototype.show = function (url,params) {
+    // 2.x 代码
+    var data = {};
+    if (params) {
+        params.url = url;
+        data = params;
+    }else{
+        data.url = url;
+    }
+    Native.post('sp://navigatior/show', data)
 }

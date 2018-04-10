@@ -26,7 +26,7 @@
 <script type="text/javascript" src="native.js"></script>
 <script>new VConsole();</script>
 <script>
-    var navive = new native(0,1009,2001);
+    var navive = new native(0, 1009, 2001);
 </script>
 <!--navigatior-->
 <script>
@@ -41,6 +41,10 @@
     function pop(value) {
         navive.navigatior.pop(value)
     }
+
+    function show() {
+        navive.navigatior.show('sp://home/home',{isRemoveSelf: true})
+    }
 </script>
 <div class="btn" onclick="pop()">navigatior: pop</div>
 <div class="btn" onclick="pop(-1)">navigatior: pop(-1)</div>
@@ -48,6 +52,7 @@
 <div class="btn" onclick="pop(1)">navigatior: pop(1)</div>
 <div class="btn" onclick="pop(0)">navigatior: pop(0)</div>
 <div class="btn" onclick="pop('home')">navigatior: pop('home')</div>
+<div class="btn" onclick="show()">navigatior: show('sp://home/home',{isRemoveSelf: true})</div>
 </body>
 
 </html>
