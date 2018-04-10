@@ -2,11 +2,10 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>navtive-js</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <style>
         .btn {
             width: 100%;
@@ -18,20 +17,27 @@
 </head>
 
 <body>
-    <script type="text/javascript" src="navigatior.js"></script>
-    <script>
-        var nav = new navigatio({
-            wp: 2001,
-            version: 1009,
-            source: 0
-        })
-        nav.pop()
-    </script>
+<script src="vconsole.min.js"></script>
+<script>
+    new VConsole();
+</script>
 
-    <div class="btn" onclick="function pop() {
+<script type="text/javascript" src="navigatior.js"></script>
+<script>
+    new VConsole();
+</script>
+
+<div class="btn" onclick="function pop() {
+        var nav = new nav({
+        wp: 2001,
+        version: 1009,
+        source: 0
+    })
  nav.pop()
-}">pop</div>
-    
+}">pop
+</div>
+
+
 </body>
 
 </html>
