@@ -1,5 +1,6 @@
 var nav = function (config) {
     this.config = config
+    Native.source = config.source
     // return this
 }
 
