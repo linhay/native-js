@@ -1,4 +1,3 @@
-
 var native_config = {
     source: -1,
     wp: -1,
@@ -10,12 +9,13 @@ var native = function (source, version, wp) {
         source: source,
         wp: wp,
         version: version
-    },
+    };
     this.navigatior = new nav();
+    this.cache = new storage();
 }
 
 native.prototype.navigatior = null;
 // native.prototype.network = network;
-// native.prototype.cache = cache;
+native.prototype.cache = null;
 // native.prototype.web = web;
 // native.prototype.app = app;

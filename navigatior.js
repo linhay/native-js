@@ -5,7 +5,7 @@ nav.prototype.app_execute = function(body) {
     if (native_config.source === 0) {
         window.webkit.messageHandlers.execute.postMessage(body);
     } else {
-        myWeb.postMessage(name, JSON.stringify(body));
+        myWeb.postMessage('execute', JSON.stringify(body));
     }
 };
 
@@ -15,7 +15,7 @@ nav.prototype.app_pop = function(name) {
     if (native_config.source === 0) {
         window.webkit.messageHandlers.pop.postMessage(data);
     } else {
-        myWeb.postMessage(name, JSON.stringify(data));
+        myWeb.postMessage('pop', JSON.stringify(data));
     }
 };
 
@@ -24,14 +24,18 @@ nav.prototype.app_push = function(body) {
     if (native_config.source === 0) {
         window.webkit.messageHandlers.push.postMessage(body);
     } else {
-        myWeb.postMessage(name, JSON.stringify(body));
+        myWeb.postMessage('push', JSON.stringify(body));
     }
 };
 
 
 /* 回退至指定app页面
 *  value: 可缺省 | 指定页面名称 | 回退层数
-*  exp: value = home | value = -2
+*
+*   exp:
+*       pop()
+*       pop('home')
+*       pop(-2)
 *  */
 nav.prototype.pop = function (value) {
 
@@ -75,13 +79,27 @@ nav.prototype.pop = function (value) {
     Native.post('sp://navigatior/pop', params)
 };
 
-//获取可回退app页面列表
+
+/* 获取可回退app页面列表
+*   exp:
+*       backList(function(value){
+*           value = ['tabbar','message'];
+*       })
+* */
 nav.prototype.backList = function (cb) {
     if (!(native_config.wp > 2000)) throw "该版本不支持 backList";
     Native.post('sp://navigatior/backList', cb)
 };
 
-//跳转至app页面列表
+/* 跳转至app页面列表
+* url: 对应路由表 http://39.108.111.114:3000/B7-Protocol/Web-Native
+* params: 相应设置(可缺省)
+*    isRemoveSelf: 0 | 1, 跳转后移除当前webView页面
+*
+*    exp:
+*       show('sp://home/home',{isRemoveSelf: 0})
+*       show('sp://home/home')
+* */
 nav.prototype.show = function (url,params) {
 
     var data = {};
