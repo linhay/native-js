@@ -48,8 +48,6 @@ var StorageEvent = {
     }
 };
 
-storage.prototype.cbList = {};
-
 function cacheResult(name,value) {
     StorageEvent.fireEvent(name,value)
 }
