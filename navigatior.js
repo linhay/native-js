@@ -16,7 +16,7 @@ nav.prototype.pop = function (value) {
         if (native_config.source == 0) {
             var data = {};
             data.url = 'sp://tabbar/selectIndex?index=' + index;
-            this.post_for_1('execute',data);
+            this.post_for_1('execute',JSON.stringify(data));
             data.vcName = 'tabbar';
             this.post_for_1('pop',data);
         } else {
