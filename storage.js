@@ -19,7 +19,7 @@ storage.prototype.app_cache = function (type, name, value) {
 
 
 storage.prototype.get = function (list, cb) {
-    if (!(native_config.wp > 2000)) {
+    if (native_config.wp < 2000) {
         this.app_cache('get', list.firstChild, cb);
         return;
     }
@@ -28,7 +28,7 @@ storage.prototype.get = function (list, cb) {
 
 
 storage.prototype.set = function (key, value, cb) {
-    if (!(native_config.wp > 2000)) {
+    if (native_config.wp < 2000) {
         this.app_cache('set', key, value);
         cb({ans: 'ok'});
         return;
