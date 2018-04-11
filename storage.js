@@ -106,9 +106,7 @@ storage.prototype.set = function (key, value, cb) {
         return;
     }
 
-    var str = JSON.stringify(value);
-    str = '{"' + key + '":' + str + '}';
-    var data = JSON.parse(str);
+    var data[key] = value;
     Native.post('sp://cache/set', data, cb)
 };
 
