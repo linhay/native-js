@@ -106,7 +106,8 @@ storage.prototype.set = function (key, value, cb) {
         return;
     }
 
-    var data[key] = value;
+    var data = {};
+    data[key] = value;
     Native.post('sp://cache/set', data, cb)
 };
 
