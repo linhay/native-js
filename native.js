@@ -10,6 +10,7 @@ var native = function (source, version, wp) {
         wp: wp,
         version: version
     };
+    Native.source = source;
     this.navigatior = new nav();
     this.cache = new storage();
 }

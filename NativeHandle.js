@@ -1,5 +1,6 @@
 var Native = {
     id: 0,
+    source: -1,
     isHas: function(name) {
         try {
             return typeof eval(name) === "function"
