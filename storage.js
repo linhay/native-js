@@ -1,5 +1,11 @@
-var storage = function () {
-};
+var storage = function () {};
+
+
+function cacheResult(name,value) {
+    alert(name)
+    alert(value)
+}
+
 storage.prototype.app_cache = function (type, name, value) {
     if (!(native_config.source === 0 || native_config.source === -1)) {
         return
