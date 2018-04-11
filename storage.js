@@ -48,14 +48,16 @@ var StorageEvent = {
     }
 };
 
-var cache_result_req_queue = [];
-var cache_result_back_queue = {};
+var _cache_result_req_queue = [];
+var _cache_result_back_queue = {};
 
 function cacheResult(name, value) {
-    cache_result_back_queue[name].push(value);
-    if (cache_result_back_queue.count() === cache_result_req_queue.count()) {
-        StorageEvent.fireEvent(name, cache_result_back_queue)
+    _cache_result_back_queue[name] = value;
+    for (name in _cache_result_req_queue) {
+        if (_cache_result_back_queue[_cache_result_req_queue[name]] === undefined) return;
     }
+    var name = JSON.stringify(_cache_result_req_queue);
+    StorageEvent.fireEvent(name, _cache_result_back_queue);
 }
 
 storage.prototype.app_cache = function (type, name, value) {
@@ -68,7 +70,8 @@ storage.prototype.app_cache = function (type, name, value) {
         newValue: value
     };
     if (native_config.source === 0) {
-        window.webkit.messageHandlers.storage.postMessage(body);
+        cacheResult(name, {ans: 'ok'})
+        // window.webkit.messageHandlers.storage.postMessage(body);
     } else {
         myWeb.postMessage('storage', JSON.stringify(body));
     }
@@ -77,17 +80,17 @@ storage.prototype.app_cache = function (type, name, value) {
 
 storage.prototype.get = function (list, cb) {
     if (native_config.wp < 2000) {
-        cache_result_req_queue = list;
+        _cache_result_req_queue = list;
         var name = JSON.stringify(list);
 
         for (item in list) {
-            this.app_cache('get', item);
+            this.app_cache('get', list[item]);
         }
 
         StorageEvent.addEvent(name, function (value) {
             StorageEvent.removeEvent(name);
-            cache_result_req_queue = {};
-            cache_result_back_queue = {};
+            _cache_result_req_queue = [];
+            _cache_result_back_queue = {};
             cb(value);
         });
         return;

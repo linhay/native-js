@@ -58,8 +58,8 @@
       <file leaf-file-name="storage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/storage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
+            <state relative-caret-position="54">
+              <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
               <folding>
                 <element signature="e#51#1310#0" expanded="false" />
               </folding>
@@ -178,12 +178,12 @@
       <updated>1523327456090</updated>
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
-      <workItem from="1523427694183" duration="9227000" />
+      <workItem from="1523427694183" duration="11226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22899000" />
+    <option name="totallyTimeSpent" value="24898000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -225,7 +225,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -409,8 +411,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/storage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="87" column="43" lean-forward="true" selection-start-line="87" selection-start-column="43" selection-end-line="87" selection-end-column="43" />
+        <state relative-caret-position="54">
+          <caret line="59" column="32" lean-forward="false" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
           <folding>
             <element signature="e#51#1310#0" expanded="false" />
           </folding>
