@@ -24,11 +24,12 @@
 </script>
 <script type="text/javascript" src="NativeHandle.js"></script>
 <script type="text/javascript" src="navigatior.js"></script>
+<script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="storage.js"></script>
 <script type="text/javascript" src="native.js"></script>
 <script>new VConsole();</script>
 <script>
-    var native = new native(0, 2001, 1009);
+    var native = new native(0, 2001, 2001);
 </script>
 <!--navigatior-->
 <script>
@@ -82,12 +83,18 @@
     }
 
 </script>
-
 <div>
     <div class="btn" onclick="set()">cache: set('market',{market_iid: 2001},cb)</div>
     <div class="btn" onclick="get()">cache: get(['market','address'],cb)</div>
 </div>
 
+<!--app-->
+<script>
+    function open() {
+    native.app.open('tel://18825031078')
+    }
+</script>
+<div class="btn" onclick="open()">app: open('tel://18825031078')</div>
 </body>
 
 </html>
