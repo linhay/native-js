@@ -84,7 +84,6 @@ nav.prototype.backList = function (cb) {
 //跳转至app页面列表
 nav.prototype.show = function (url,params) {
 
-    // 2.x 代码
     var data = {};
     if (params) {
         params.url = url;
@@ -94,8 +93,10 @@ nav.prototype.show = function (url,params) {
     }
 
     if (!(native_config.wp > 2000)) {
+        // 1.x 代码
         this.app_push(data);
     }else{
+        // 2.x 代码
         Native.post('sp://navigatior/show', data)
     }
 };
