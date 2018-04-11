@@ -26,7 +26,7 @@ storage.prototype.app_cache = function (type, name, value) {
 
 storage.prototype.get = function (list, cb) {
     if (native_config.wp < 2000) {
-        this.app_cache('get', list.firstChild, cb);
+        this.app_cache('get', name, list.pop());
         return;
     }
     Native.post('sp://cache/get', {list: JSON.stringify(list)}, cb)
