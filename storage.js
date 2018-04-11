@@ -70,8 +70,8 @@ storage.prototype.app_cache = function (type, name, value) {
         newValue: value
     };
     if (native_config.source === 0) {
-        cacheResult(name, {ans: 'ok'})
-        // window.webkit.messageHandlers.storage.postMessage(body);
+        // cacheResult(name, {ans: 'ok'})
+        window.webkit.messageHandlers.storage.postMessage(body);
     } else {
         myWeb.postMessage('storage', JSON.stringify(body));
     }
