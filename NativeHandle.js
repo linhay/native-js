@@ -1,6 +1,5 @@
 var Native = {
     id: 0,
-    source: -1,
     isHas: function(name) {
         try {
             return typeof eval(name) === "function"
@@ -37,10 +36,6 @@ var Native = {
     },
 
     post: function(url, params, callBack) {
-        if (!(Native.source == 0 || Native.source == 1)) {
-            return
-        }
-
         Native.id += 1;
         var id = Native.id;
 
