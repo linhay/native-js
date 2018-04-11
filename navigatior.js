@@ -1,8 +1,8 @@
 var nav = function () {};
 
 nav.prototype.post_for_1 = function (name,body) {
-    if (!(native_config.source == 0 || native_config.source == -1)) { return }
-    if (native_config.source == 0) {
+    if (!(native_config.source === 0 || native_config.source === -1)) { return }
+    if (native_config.source === 0) {
         eval('window.webkit.messageHandlers.' + name + '.postMessage(' + body + ');')
     } else {
         myWeb.postMessage(name, JSON.stringify(body));
@@ -13,7 +13,7 @@ nav.prototype.post_for_1 = function (name,body) {
 //回退至指定app页面
 nav.prototype.pop = function (value) {
     function special(index) {
-        if (native_config.source == 0) {
+        if (native_config.source === 0) {
             var data = {};
             data.url = 'sp://tabbar/selectIndex?index=' + index;
             this.post_for_1('execute',JSON.stringify(data));
