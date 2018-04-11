@@ -7,6 +7,8 @@ nav.prototype.post_for_1 = function (name,body) {
     } else {
         myWeb.postMessage(name, JSON.stringify(body));
     }
+
+
 };
 
 
@@ -16,6 +18,7 @@ nav.prototype.pop = function (value) {
         if (native_config.source === 0) {
             var data = {};
             data.url = 'sp://tabbar/selectIndex?index=' + index;
+            window.webkit.messageHandlers.execute.postMessage(data);
             this.post_for_1('execute',JSON.stringify(data));
             data.vcName = 'tabbar';
             this.post_for_1('pop',data);
