@@ -49,10 +49,7 @@ var Native = {
         // url解析
         var urlObject = Native.parserURL(url);
         // 参数合并
-        var dataObject = {};
-        for (var attr in urlObject.params) {
-            dataObject[attr] = urlObject.params[attr];
-        }
+        var dataObject = urlObject.params;
         for (var attr in params) {
             dataObject[attr] = params[attr];
         }
