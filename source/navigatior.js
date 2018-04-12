@@ -58,9 +58,9 @@ nav.prototype.pop = function (value) {
     const params = {};
     if (!(value)) {
         if (null == /^(-)?\d+(\.\d+)?$/.exec(value)) {
-            params.name = value
-        } else {
             params.index = value
+        } else {
+            params.name = value
         }
     }
     Native.post('sp://navigatior/pop', params)
