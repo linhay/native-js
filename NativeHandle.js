@@ -122,11 +122,12 @@ var Native = {
         if (0 == this.source) {
             // iOS 合并url
             new_url = "sp://" + urlObject.host + urlObject.path + "?data=" + value1;
-        }
-
-        if (1 == this.source) {
+        } else if (1 == this.source) {
             // Android合并url
             new_url = "sp:" + urlObject.path + "?data=" + value1;
+        } else {
+            throw "无法识别的来源"
+
         }
 
         var message = {
