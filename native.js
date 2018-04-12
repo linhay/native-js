@@ -19,5 +19,5 @@ var native = function (source, version, wp) {
 native.prototype.navigatior = null;
 // native.prototype.network = network;
 native.prototype.cache = null;
-// native.prototype.web = web;
+native.prototype.web = web;
 native.prototype.app = null;

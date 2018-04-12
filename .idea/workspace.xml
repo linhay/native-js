@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/NativeHandle.js" afterPath="$PROJECT_DIR$/NativeHandle.js" />
+      <change beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change beforePath="$PROJECT_DIR$/native.js" afterPath="$PROJECT_DIR$/native.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,60 +33,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="native.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/native.js">
+      <file leaf-file-name="web.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
+            <state relative-caret-position="298">
+              <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
               <folding>
                 <element signature="e#263#797#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NativeHandle.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
-              <folding>
-                <element signature="e#4460#4652#0" expanded="false" />
-                <element signature="e#4695#4739#0" expanded="false" />
-                <element signature="e#4821#5053#0" expanded="false" />
-                <element signature="e#5094#5434#0" expanded="false" />
-                <element signature="e#5474#6017#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="network.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/network.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -118,13 +84,13 @@
         <option value="$PROJECT_DIR$/trunk.sh" />
         <option value="$PROJECT_DIR$/update.sh" />
         <option value="$PROJECT_DIR$/cache.js" />
-        <option value="$PROJECT_DIR$/native.js" />
         <option value="$PROJECT_DIR$/navigatior.js" />
         <option value="$PROJECT_DIR$/storage.js" />
         <option value="$PROJECT_DIR$/network.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/NativeHandle.js" />
+        <option value="$PROJECT_DIR$/native.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -225,12 +191,12 @@
       <updated>1523327456090</updated>
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
-      <workItem from="1523427694183" duration="23974000" />
+      <workItem from="1523427694183" duration="24420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37646000" />
+    <option name="totallyTimeSpent" value="38092000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -293,7 +259,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/NativeHandle.js</url>
+          <line>227</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -436,16 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="73" column="5" lean-forward="true" selection-start-line="73" selection-start-column="5" selection-end-line="73" selection-end-column="5" />
-          <folding>
-            <element signature="e#263#797#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -459,24 +423,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NativeHandle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="208" column="2" lean-forward="true" selection-start-line="208" selection-start-column="2" selection-end-line="208" selection-end-column="2" />
+          <folding>
+            <element signature="e#13#4784#0" expanded="false" />
+            <element signature="e#4502#4694#0" expanded="false" />
+            <element signature="e#4737#4781#0" expanded="false" />
+            <element signature="e#4805#6061#0" expanded="false" />
+            <element signature="e#4863#5095#0" expanded="false" />
+            <element signature="e#5136#5476#0" expanded="false" />
+            <element signature="e#5516#6059#0" expanded="false" />
+            <element signature="e#6265#6473#0" expanded="false" />
+            <element signature="e#6661#14356#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/native.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="305">
+          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NativeHandle.js">
+    <entry file="file://$PROJECT_DIR$/web.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="72" column="9" lean-forward="true" selection-start-line="72" selection-start-column="9" selection-end-line="72" selection-end-column="9" />
           <folding>
-            <element signature="e#4460#4652#0" expanded="false" />
-            <element signature="e#4695#4739#0" expanded="false" />
-            <element signature="e#4821#5053#0" expanded="false" />
-            <element signature="e#5094#5434#0" expanded="false" />
-            <element signature="e#5474#6017#0" expanded="false" />
+            <element signature="e#263#797#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -127,7 +127,6 @@ var Native = {
             new_url = "sp:" + urlObject.path + "?data=" + value1;
         } else {
             throw "无法识别的来源"
-
         }
 
         var message = {

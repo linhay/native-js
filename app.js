@@ -67,7 +67,7 @@ app.prototype.pay = function (type, data) {
         if (type === 2) {
             var json = {};
             json.type = 2;
-            json.aliPay = dat.bill_sid;
+            json.aliPay = data.bill_sid;
             Native.bridge_for_1('pay', json);
             return;
         }
