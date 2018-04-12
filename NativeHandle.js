@@ -39,7 +39,7 @@ var Native = {
     },
 
     bridge_for_1: function (name, body) {
-        if (0 === this.source) {
+        if (0 == this.source) {
             switch (name) {
                 case 'push':
                     window.webkit.messageHandlers.push.postMessage(body);
@@ -74,7 +74,7 @@ var Native = {
             return;
         }
 
-        if (1 === this.source) {
+        if (1 == this.source) {
             myWeb.postMessage(name, JSON.stringify(body));
             return;
         }
@@ -83,16 +83,20 @@ var Native = {
     },
 
     bridge: function (message) {
-        if (this.source === 0) {
+        if (0 == this.source) {
             // iOS 合并url
             window.webkit.messageHandlers.ios.postMessage(message);
             return;
         }
 
-        if (1 === this.source) {
+        if (1 == this.source) {
             // Android合并url
             myWeb.postMessage('android', JSON.stringify(message));
+            return;
         }
+
+        throw "无法识别的来源"
+
     },
 
     post: function (url, params, callBack) {
