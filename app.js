@@ -10,7 +10,23 @@ app.prototype.open = function (url) {
     Native.post('sp://app/open', {url: url});
 };
 
-
+/*  获取定位信息
+  value:
+        {
+        "longitude": 100.0000,
+        "latitude": 100.0000,
+        "country": '国家',
+        "province": '省份',
+        "city": '城市',
+        "cityCode": '城市编码',
+        "adCode": '',
+        "address": '地址',
+        "poiName": 'poi',
+        "street": '街道编码',
+        "streetNum": '门牌号',
+        "aoiName": 'aoi'
+        }
+* */
 app.prototype.location = function (cb) {
     if (native_config.wp < 2000) {
         var list = ['location'];
@@ -27,13 +43,19 @@ app.prototype.location = function (cb) {
             NativeEvent.removeEvent(name);
             _cache_result_req_queue = [];
             _cache_result_back_queue = {};
-            cb(value);
+            cb(value.location);
         });
         return;
     }
     Native.post('sp://app/location', cb);
 };
 
+/* 分享
+*  params: 配置参数 有以下值可选
+*
+*
+*
+* */
 app.prototype.share = function (params, cb) {
     if (native_config.wp < 2000) {
         Native.bridge_for_1('share', params);
