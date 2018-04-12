@@ -13,6 +13,7 @@ app.prototype.open = function (url) {
 
 app.prototype.location = function (cb) {
     if (native_config.wp < 2000) {
+        var list = ['location'];
         _cache_result_req_queue = list;
         var name = JSON.stringify(list);
 
