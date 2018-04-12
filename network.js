@@ -1,9 +1,7 @@
-const network = {
+var network = function () {
 
-    post: function (params, cb) {
-        if (native_config.wp < 2000) throw "不支持该版本";
-        Native.post("sp://network/post", params, cb)
-    }
+};
 
-
+network.prototype.post = function (params, cb) {
+    Native.post("sp://network/post", params, cb)
 };

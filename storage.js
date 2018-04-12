@@ -27,7 +27,6 @@ storage.prototype.get = function (list, cb) {
     Native.post('sp://cache/get', {list: JSON.stringify(list)}, cb)
 };
 
-
 storage.prototype.set = function (key, value, cb) {
     // 1.x 代码
     if (native_config.wp < 2000) {

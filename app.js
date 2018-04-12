@@ -52,9 +52,12 @@ app.prototype.location = function (cb) {
 
 /* 分享
 *  params: 配置参数 有以下值可选
-*
-*
-*
+        title: String     // 标题
+        text: String      // 描述
+        image: String     // 图片链接         1.8.0+
+        wx_app_id: String // 微信小程序原始id  1.8.0+
+        wx_path: String   // 微信小程序页面路径 1.8.0+
+        url: String       // 链接
 * */
 app.prototype.share = function (params, cb) {
     if (native_config.wp < 2000) {
