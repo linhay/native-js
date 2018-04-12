@@ -42,9 +42,17 @@ app.prototype.share = function (params, cb) {
 };
 
 app.prototype.pay = function (type, data) {
+
+    if (type === 'wechat') {
+        type = 1;
+    }
+
+    if (type === 'alipay') {
+        type = 2
+    }
+
     if (native_config.wp < 2000) {
-        var json = {};
-        if (type === 1 || type === 'wechat') {
+        if (type === 1) {
             var url = 'weixin://app/' + data.appid + '/pay/?';
             url += 'nonceStr=' + data.noncestr;
             url += '&package=' + encodeURIComponent(data.package);
@@ -53,14 +61,18 @@ app.prototype.pay = function (type, data) {
             url += '&timeStamp=' + data.timestamp;
             url += '&sign=' + data.sign;
             url += '&signType=SHA1';
-        Native.bridge_for_1('open',{url: url});
+            Native.bridge_for_1('open', {url: url});
+            return;
         }
-        if (type === 2 || type === 'alipay') {
+        if (type === 2) {
+            var json = {};
             json.type = 2;
             json.aliPay = dat.bill_sid;
+            Native.bridge_for_1('pay', json);
+            return;
         }
-        Native.bridge_for_1('pay', json);
-        return;
     }
+
+    data.type = type;
     Native.post('sp://app/pay', data);
 };
