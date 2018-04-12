@@ -630,10 +630,10 @@ nav.prototype.pop = function (value) {
     // 2.x 代码
     const params = {};
     if (value) {
-        if (null == /^(-)?\d+(\.\d+)?$/.exec(value)) {
-            params.index = value
+        if (/^(-)?\d+(\.\d+)?$/.exec(value)) {
+            params.index = value;
         } else {
-            params.name = value
+            params.name = value;
         }
     }
     Native.post('sp://navigatior/pop', params)
