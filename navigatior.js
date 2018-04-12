@@ -30,16 +30,22 @@ nav.prototype.pop = function (value) {
         switch (value) {
             case 'home':
                 special(0);
+                break;
             case 'cateory':
                 special(1);
+                break;
             case 'message':
                 special(2);
+                break;
             case 'shopcart':
                 special(3);
+                break;
             case 'myProfile':
                 special(4);
+                break;
             default:
                 Native.bridge_for_1('pop', {vcName: value});
+                break;
         }
         return
     }
