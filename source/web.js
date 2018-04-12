@@ -8,6 +8,10 @@ web.prototype.sendVersion = function (version, cb) {
 
 // 与原生返回按键效果一致
 web.prototype.goback = function (jsStr, cb) {
+    if (native_config.wp < 2000) {
+        window.history.back();
+        return;
+    }
     Native.post('sp://web/goback', {js: jsStr}, cb)
 };
 
