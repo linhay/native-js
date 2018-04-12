@@ -56,14 +56,14 @@
       <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NativeHandle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1692">
-              <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+            <state relative-caret-position="215">
+              <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
               <folding>
-                <element signature="e#4442#4634#0" expanded="false" />
-                <element signature="e#4677#4721#0" expanded="false" />
-                <element signature="e#4803#5035#0" expanded="false" />
-                <element signature="e#5076#5416#0" expanded="false" />
-                <element signature="e#5456#5999#0" expanded="false" />
+                <element signature="e#4460#4652#0" expanded="false" />
+                <element signature="e#4695#4739#0" expanded="false" />
+                <element signature="e#4821#5053#0" expanded="false" />
+                <element signature="e#5094#5434#0" expanded="false" />
+                <element signature="e#5474#6017#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -225,12 +225,12 @@
       <updated>1523327456090</updated>
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
-      <workItem from="1523427694183" duration="23896000" />
+      <workItem from="1523427694183" duration="23974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37568000" />
+    <option name="totallyTimeSpent" value="37646000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,14 +469,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NativeHandle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="94" column="19" lean-forward="false" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        <state relative-caret-position="215">
+          <caret line="125" column="29" lean-forward="false" selection-start-line="125" selection-start-column="29" selection-end-line="125" selection-end-column="29" />
           <folding>
-            <element signature="e#4442#4634#0" expanded="false" />
-            <element signature="e#4677#4721#0" expanded="false" />
-            <element signature="e#4803#5035#0" expanded="false" />
-            <element signature="e#5076#5416#0" expanded="false" />
-            <element signature="e#5456#5999#0" expanded="false" />
+            <element signature="e#4460#4652#0" expanded="false" />
+            <element signature="e#4695#4739#0" expanded="false" />
+            <element signature="e#4821#5053#0" expanded="false" />
+            <element signature="e#5094#5434#0" expanded="false" />
+            <element signature="e#5474#6017#0" expanded="false" />
           </folding>
         </state>
       </provider>

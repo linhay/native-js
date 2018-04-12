@@ -119,10 +119,12 @@ var Native = {
         var value1 = Base64.encode(data);
         value1 = value1.replace(/=/g, "*");
         var new_url;
-        if (Native.source === 0) {
+        if (0 == this.source) {
             // iOS 合并url
             new_url = "sp://" + urlObject.host + urlObject.path + "?data=" + value1;
-        } else {
+        }
+
+        if (1 == this.source) {
             // Android合并url
             new_url = "sp:" + urlObject.path + "?data=" + value1;
         }
