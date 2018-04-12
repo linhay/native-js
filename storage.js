@@ -1,4 +1,5 @@
-var storage = function () {};
+var storage = function () {
+};
 
 storage.prototype.get = function (list, cb) {
     // 1.x 代码
@@ -7,7 +8,11 @@ storage.prototype.get = function (list, cb) {
         var name = JSON.stringify(list);
 
         for (var item in list) {
-            this.app_cache('get', list[item]);
+            var body = {
+                type: 'get',
+                name: list[item]
+            };
+            Native.bridge_for_1('storage', body);
         }
 
         NativeEvent.addEvent(name, function (value) {
@@ -26,8 +31,15 @@ storage.prototype.get = function (list, cb) {
 storage.prototype.set = function (key, value, cb) {
     // 1.x 代码
     if (native_config.wp < 2000) {
-        this.app_cache('set', key, value);
-        cb({ans: 'ok'});
+        var body = {
+            type: 'set',
+            name: key,
+            newValue: value
+        };
+        Native.bridge_for_1('storage',body);
+        setTimeout(function () {
+            cb({ans: 'ok'});
+        },0.2);
         return;
     }
 
@@ -50,19 +62,3 @@ function cacheResult(name, value) {
     var name = JSON.stringify(_cache_result_req_queue);
     NativeEvent.fireEvent(name, _cache_result_back_queue);
 }
-
-storage.prototype.app_cache = function (type, name, value) {
-    if (!(native_config.source === 0 || native_config.source === -1)) {
-        return
-    }
-    var body = {
-        type: type,
-        name: name,
-        newValue: value
-    };
-    if (native_config.source === 0) {
-        window.webkit.messageHandlers.storage.postMessage(body);
-    } else {
-        myWeb.postMessage('storage', JSON.stringify(body));
-    }
-};
