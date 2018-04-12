@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -54,21 +53,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NativeHandle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
               <folding>
-                <element signature="e#71#203#0" expanded="false" />
-                <element signature="e#239#1161#0" expanded="false" />
-                <element signature="e#1204#2703#0" expanded="false" />
-                <element signature="e#2737#2994#0" expanded="false" />
-                <element signature="e#4353#4545#0" expanded="false" />
-                <element signature="e#4588#4632#0" expanded="false" />
-                <element signature="e#4714#4946#0" expanded="false" />
-                <element signature="e#4987#5327#0" expanded="false" />
-                <element signature="e#5367#5910#0" expanded="false" />
+                <element signature="e#4396#4588#0" expanded="false" />
+                <element signature="e#4631#4675#0" expanded="false" />
+                <element signature="e#4757#4989#0" expanded="false" />
+                <element signature="e#5030#5370#0" expanded="false" />
+                <element signature="e#5410#5953#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -124,12 +119,12 @@
         <option value="$PROJECT_DIR$/update.sh" />
         <option value="$PROJECT_DIR$/cache.js" />
         <option value="$PROJECT_DIR$/native.js" />
-        <option value="$PROJECT_DIR$/NativeHandle.js" />
         <option value="$PROJECT_DIR$/navigatior.js" />
         <option value="$PROJECT_DIR$/storage.js" />
         <option value="$PROJECT_DIR$/network.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/NativeHandle.js" />
       </list>
     </option>
   </component>
@@ -230,12 +225,12 @@
       <updated>1523327456090</updated>
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
-      <workItem from="1523427694183" duration="23436000" />
+      <workItem from="1523427694183" duration="23668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37108000" />
+    <option name="totallyTimeSpent" value="37340000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -440,24 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NativeHandle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="113" column="0" lean-forward="true" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#71#203#0" expanded="false" />
-            <element signature="e#239#1161#0" expanded="false" />
-            <element signature="e#1204#2703#0" expanded="false" />
-            <element signature="e#2737#2994#0" expanded="false" />
-            <element signature="e#4353#4545#0" expanded="false" />
-            <element signature="e#4588#4632#0" expanded="false" />
-            <element signature="e#4714#4946#0" expanded="false" />
-            <element signature="e#4987#5327#0" expanded="false" />
-            <element signature="e#5367#5910#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
@@ -485,6 +462,20 @@
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NativeHandle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#4396#4588#0" expanded="false" />
+            <element signature="e#4631#4675#0" expanded="false" />
+            <element signature="e#4757#4989#0" expanded="false" />
+            <element signature="e#5030#5370#0" expanded="false" />
+            <element signature="e#5410#5953#0" expanded="false" />
           </folding>
         </state>
       </provider>
