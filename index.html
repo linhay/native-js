@@ -29,7 +29,7 @@
 <script type="text/javascript" src="native.js"></script>
 <script>new VConsole();</script>
 <script>
-    var native = new native(0, 2001, 1008);
+    var native = new native(0, 2001, 2001);
 </script>
 <!--navigatior-->
 <script>
@@ -46,7 +46,7 @@
     }
 
     function show(isRemoveSelf) {
-        native.navigatior.show('sp://home/home',{isRemoveSelf: isRemoveSelf})
+        native.navigatior.show('sp://home/home', {isRemoveSelf: isRemoveSelf})
     }
 
     function backlist() {
@@ -55,7 +55,7 @@
         })
     }
 </script>
-<div >
+<div>
     <div class="btn" onclick="pop()">navigatior: pop</div>
     <div class="btn" onclick="pop(-1)">navigatior: pop(-1)</div>
     <div class="btn" onclick="pop(-999)">navigatior: pop(-999)</div>
@@ -71,13 +71,13 @@
 <script>
 
     function set() {
-        native.cache.set('market',{market_iid: 2001},function (value) {
+        native.cache.set('market', {market_iid: 2001}, function (value) {
             alert(JSON.stringify(value))
         });
     }
 
     function get() {
-        native.cache.get(['market','address'],function (value) {
+        native.cache.get(['market', 'address'], function (value) {
             alert(JSON.stringify(value))
         });
     }
@@ -91,10 +91,45 @@
 <!--app-->
 <script>
     function app_open() {
-    native.app.open('tel://18825031078')
+        native.app.open('tel://18825031078')
     }
+
+    function alipay() {
+        var data = "{\"ans\":\"ok\",\"bill_sid\":\"cc1002z1804121002\",\"bill_info\":\"partner%3D%222088421539045380%22%26seller_id%3D%22sp%40spzjs.com%22%26out_trade_no%3D%22testcc1002z1804121002%22%26subject%3D%22%E8%86%B3%E5%93%81.APP%E6%8B%BC%E5%9B%A2%E8%AE%A2%E5%8D%95%3Acc1002z1804121002%22%26body%3D%22%E8%86%B3%E5%93%81.APP%E6%8B%BC%E5%9B%A2%E8%AE%A2%E5%8D%95%3Acc1002z1804121002%22%26total_fee%3D%222.22%22%26notify_url%3D%22http%3A%2F%2Ft-web.3pzs.com%2Fapp%2Falipay_callback.php%22%26service%3D%22mobile.securitypay.pay%22%26payment_type%3D%221%22%26_input_charset%3D%22utf-8%22%26it_b_pay%3D%2230m%22%26sign%3D%22O%252B0%252Bxmq0GQ7aZz%252FX0korKhMBX4tqD2F4FOC3lavqPmgqlDOGIEDXH1UIUypKKMl5oDnf5e9fkNlGS%252FdOEhqy2CP0kQFzsOszdWNJFBf2Vy2UZpscGCvUye43qVQfWEdub5QDMsB9qqmtNCZZs4ntdHpnEY7G6wsTdpTEqDLilrI%253D%22%26sign_type%3D%22RSA%22\"}"
+        native.app.pay('alipay', JSON.parse(data));
+    }
+
+    function wechat() {
+        var data = "{\"ans\":\"ok\",\"bill_sid\":\"cc1002z1804121003\",\"appid\":\"wxf4af62c369b61b4f\",\"partnerid\":\"1389272602\",\"prepayid\":\"wx121437574820705b6a1783463331878497\",\"noncestr\":\"oBRJHRpUWyiBULnZ\",\"timestamp\":1523515077,\"package\":\"Sign=WXPay\",\"sign\":\"ABDFE5C07827CCE95E6CE11B8BAA0B12\"}"
+        native.app.pay('wechat', JSON.parse(data));
+    }
+
+    function share() {
+        var data = {
+            title: 'test',
+            text: 'test text',
+            url: 'http://www.baidu.com'
+        };
+
+        native.app.share(data,function (value) {
+            alert(JSON.stringify(value))
+        })
+    }
+
+    function location() {
+        native.app.location(function (value) {
+            alert(JSON.stringify(value))
+        })
+    }
+
 </script>
 <div class="btn" onclick="app_open()">app: open('tel://18825031078')</div>
+<div class="btn" onclick="alipay()">app: pay(2, JSON.parse(data))</div>
+<div class="btn" onclick="alipay()">app: pay('alipay', JSON.parse(data))</div>
+<div class="btn" onclick="wechat()">app: pay(1, JSON.parse(data))</div>
+<div class="btn" onclick="wechat()">app: pay('wechat', JSON.parse(data))</div>
+<div class="btn" onclick="share()">app: share(data,cb)</div>
+<div class="btn" onclick="location()">app: app.location(cb)</div>
 </body>
 
 </html>
