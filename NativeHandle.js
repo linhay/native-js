@@ -60,7 +60,6 @@ var Native = {
                 case 'execute':
                     window.webkit.messageHandlers.execute.postMessage(body);
             }
-            fun(body);
             return;
         }
 
