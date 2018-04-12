@@ -1,13 +1,6 @@
 var Native = {
     id: 0,
     source: -1,
-    isHas: function(name) {
-        try {
-            return typeof eval(name) === "function"
-        } catch (e) {
-            return false
-        }
-    },
 
     parserURL: function(urlObj) {
         const url = urlObj.toString();
@@ -108,6 +101,14 @@ var Native = {
         NativeEvent._listeners = {};
     }
 
+};
+
+Native.prototype.isHas = function(name) {
+    try {
+        return typeof eval(name) === "function"
+    } catch (e) {
+        return false
+    }
 };
 
 var NativeEvent = {
