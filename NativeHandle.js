@@ -39,15 +39,37 @@ var Native = {
     },
 
     bridge_for_1: function (name, body) {
-        if (!(native_config.source === 0 || native_config.source === -1)) {
-            return
-        }
-        if (native_config.source === 0) {
-            var fun = eval('window.webkit.messageHandlers.' + name + '.postMessage');
+        if (0 === this.source) {
+            switch (name) {
+                case 'push':
+                    window.webkit.messageHandlers.push.postMessage(body);
+                case 'ui':
+                    window.webkit.messageHandlers.ui.postMessage(body);
+                case 'open':
+                    window.webkit.messageHandlers.open.postMessage(body);
+                case 'pop':
+                    window.webkit.messageHandlers.pop.postMessage(body);
+                case 'pay':
+                    window.webkit.messageHandlers.pay.postMessage(body);
+                case 'storage':
+                    window.webkit.messageHandlers.storage.postMessage(body);
+                case 'share':
+                    window.webkit.messageHandlers.share.postMessage(body);
+                case 'debug':
+                    window.webkit.messageHandlers.share.postMessage(body);
+                case 'execute':
+                    window.webkit.messageHandlers.execute.postMessage(body);
+            }
             fun(body);
-        } else {
-            myWeb.postMessage(name, JSON.stringify(body));
+            return;
         }
+
+        if (1 === this.source) {
+            myWeb.postMessage(name, JSON.stringify(body));
+            return;
+        }
+
+        throw "无法识别的来源"
     },
 
     bridge: function (message) {
