@@ -26,7 +26,8 @@
 <script type="text/javascript" src="native.js"></script>
 <script>
     new VConsole();
-    var native = new native(0, 2001, 1009);
+    var params = Native.parserURL(window.location.href).params;
+    var native = new native(params.source, params.app_version, params.wp);
 </script>
 <!--navigatior-->
 <script>
