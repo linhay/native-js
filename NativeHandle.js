@@ -56,7 +56,7 @@ var Native = {
                 case 'share':
                     window.webkit.messageHandlers.share.postMessage(body);
                 case 'debug':
-                    window.webkit.messageHandlers.share.postMessage(body);
+                    window.webkit.messageHandlers.debug.postMessage(body);
                 case 'execute':
                     window.webkit.messageHandlers.execute.postMessage(body);
             }
