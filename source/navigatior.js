@@ -56,7 +56,7 @@ nav.prototype.pop = function (value) {
 
     // 2.x 代码
     const params = {};
-    if (!(value)) {
+    if (value) {
         if (null == /^(-)?\d+(\.\d+)?$/.exec(value)) {
             params.index = value
         } else {
