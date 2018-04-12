@@ -59,6 +59,8 @@ var Native = {
                     window.webkit.messageHandlers.debug.postMessage(body);
                 case 'execute':
                     window.webkit.messageHandlers.execute.postMessage(body);
+                default:
+                    throw '无法识别的动作'
             }
             return;
         }
