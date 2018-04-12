@@ -1,4 +1,5 @@
-var nav = function () {};
+var nav = function () {
+};
 
 /* 回退至指定app页面
 *  value: 可缺省 | 指定页面名称 | 回退层数
@@ -12,13 +13,16 @@ nav.prototype.pop = function (value) {
 
     // 1.x 会推至第一层兼容函数
     function special(index) {
-        if (native_config.source === 0) {
+        if (0 == native_config.source) {
             var data = {};
             data.url = 'sp://tabbar/selectIndex?index=' + index;
             Native.bridge_for_1('execute', data);
             data.vcName = 'tabbar';
             Native.bridge_for_1('pop', data);
-        } else {
+            return;
+        }
+
+        if (0 == native_config.source) {
             data = {};
             data.url = "sp://" + value + "/" + value;
             Native.bridge_for_1('push', data);
