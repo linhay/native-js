@@ -59,6 +59,5 @@ function cacheResult(name, value) {
     for (var name in _cache_result_req_queue) {
         if (_cache_result_back_queue[_cache_result_req_queue[name]] === undefined) return;
     }
-    var name = JSON.stringify(_cache_result_req_queue);
     NativeEvent.fireEvent(name, _cache_result_back_queue);
 }
