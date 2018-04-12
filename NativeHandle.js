@@ -1,6 +1,15 @@
 var Native = {
     id: 0,
+
     source: -1,
+
+    isHas: function(name) {
+        try {
+            return "function" === typeof eval(name);
+        } catch (e) {
+            return false;
+        }
+    },
 
     parserURL: function(urlObj) {
         const url = urlObj.toString();
@@ -29,12 +38,22 @@ var Native = {
         };
     },
 
+    bridge: function (message) {
+        if (Native.source === 0) {
+            // iOS 合并url
+            window.webkit.messageHandlers.ios.postMessage(message);
+        } else {
+            // Android合并url
+            myWeb.postMessage('android', JSON.stringify(message));
+        }
+    },
+
     post: function(url, params, callBack) {
         Native.id += 1;
         var id = Native.id;
 
         // params默认值
-        if (typeof params === "function" && (callBack === undefined || callBack == null)) {
+        if ("function" === typeof params  && !(callBack)) {
             callBack = params;
             params = {}
         }
@@ -43,15 +62,13 @@ var Native = {
         var urlObject = Native.parserURL(url);
         // 参数合并
         var dataObject = urlObject.params;
-        for (var attr in params) {
-            dataObject[attr] = params[attr];
-        }
+        for (var attr in params) dataObject[attr] = params[attr];
         var data = JSON.stringify(dataObject);
         // 参数base64化
         var value1 = Base64.encode(data);
-        value1 = value1.replace(/=/g, "*")
+        value1 = value1.replace(/=/g, "*");
         var new_url;
-        if (Native.source == 0) {
+        if (Native.source === 0) {
             // iOS 合并url
             new_url = "sp://" + urlObject.host + urlObject.path + "?data=" + value1;
         } else {
@@ -65,26 +82,15 @@ var Native = {
         };
 
         if (!callBack) {
-            if (Native.source == 0) {
-                // iOS 合并url
-                window.webkit.messageHandlers.ios.postMessage(message);
-            } else {
-                // Android合并url
-                myWeb.postMessage('android', JSON.stringify(message))
-            }
+            this.bridge(message);
         } else {
             if (!NativeEvent._listeners[id]) {
                 NativeEvent.addEvent(id, function(data) {
+                    NativeEvent.removeEvent(id);
                     callBack(data);
                 });
             }
-            if (Native.source == 0) {
-                // iOS 合并url
-                window.webkit.messageHandlers.ios.postMessage(message);
-            } else {
-                // Android合并url
-                myWeb.postMessage('android', JSON.stringify(message))
-            }
+        this.bridge(message);
         }
 
     },
@@ -103,14 +109,6 @@ var Native = {
 
 };
 
-Native.prototype.isHas = function(name) {
-    try {
-        return typeof eval(name) === "function"
-    } catch (e) {
-        return false
-    }
-};
-
 var NativeEvent = {
 
     _listeners: {},
@@ -122,7 +120,6 @@ var NativeEvent = {
         if (typeof fn === "function") {
             this._listeners[type].push(fn);
         }
-
         return this;
     },
 
@@ -135,7 +132,6 @@ var NativeEvent = {
                 }
             }
         }
-
         return this;
     },
 
@@ -153,7 +149,6 @@ var NativeEvent = {
                 delete this._listeners[type];
             }
         }
-
         return this;
     }
 };
