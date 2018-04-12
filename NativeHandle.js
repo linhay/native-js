@@ -43,22 +43,31 @@ var Native = {
             switch (name) {
                 case 'push':
                     window.webkit.messageHandlers.push.postMessage(body);
+                    break;
                 case 'ui':
                     window.webkit.messageHandlers.ui.postMessage(body);
+                    break;
                 case 'open':
                     window.webkit.messageHandlers.open.postMessage(body);
+                    break;
                 case 'pop':
                     window.webkit.messageHandlers.pop.postMessage(body);
+                    break;
                 case 'pay':
                     window.webkit.messageHandlers.pay.postMessage(body);
+                    break;
                 case 'storage':
                     window.webkit.messageHandlers.storage.postMessage(body);
+                    break;
                 case 'share':
                     window.webkit.messageHandlers.share.postMessage(body);
+                    break;
                 case 'debug':
                     window.webkit.messageHandlers.debug.postMessage(body);
+                    break;
                 case 'execute':
                     window.webkit.messageHandlers.execute.postMessage(body);
+                    break;
                 default:
                     throw '无法识别的动作'
             }
