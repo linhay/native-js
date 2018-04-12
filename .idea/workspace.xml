@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/NativeHandle.js" afterPath="$PROJECT_DIR$/NativeHandle.js" />
-    </list>
+    <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -52,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NativeHandle.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-479">
@@ -66,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigatior.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="navigatior.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/navigatior.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1764">
@@ -223,12 +220,12 @@
       <updated>1523327456090</updated>
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
-      <workItem from="1523427694183" duration="15921000" />
+      <workItem from="1523427694183" duration="15970000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29593000" />
+    <option name="totallyTimeSpent" value="29642000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -427,30 +424,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navigatior.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <element signature="e#1606#1905#0" expanded="false" />
-            <element signature="e#2007#2014#0" expanded="false" />
-            <element signature="e#2065#2100#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="47" column="41" lean-forward="false" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -463,6 +448,18 @@
             <element signature="e#70#202#0" expanded="false" />
             <element signature="e#237#1156#0" expanded="false" />
             <element signature="e#1190#1447#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigatior.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <element signature="e#1606#1905#0" expanded="false" />
+            <element signature="e#2007#2014#0" expanded="false" />
+            <element signature="e#2065#2100#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -3,7 +3,9 @@ var nav = function () {};
 nav.prototype.app_execute = function(body) {
     if (!(native_config.source === 0 || native_config.source === -1)) { return }
     if (native_config.source === 0) {
-        window.webkit.messageHandlers.execute.postMessage(body);
+     var fun = eval('window.webkit.messageHandlers.execute.postMessage');
+     fun(body);
+        // window.webkit.messageHandlers.execute.postMessage(body);
     } else {
         myWeb.postMessage('execute', JSON.stringify(body));
     }
