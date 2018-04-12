@@ -83,10 +83,13 @@ var Native = {
     },
 
     bridge: function (message) {
-        if (Native.source === 0) {
+        if (this.source === 0) {
             // iOS 合并url
             window.webkit.messageHandlers.ios.postMessage(message);
-        } else {
+            return;
+        }
+
+        if (1 === this.source) {
             // Android合并url
             myWeb.postMessage('android', JSON.stringify(message));
         }
@@ -103,7 +106,7 @@ var Native = {
         }
 
         // url解析
-        var urlObject = Native.parserURL(url);
+        var urlObject = this.parserURL(url);
         // 参数合并
         var dataObject = urlObject.params;
         for (var attr in params) dataObject[attr] = params[attr];
