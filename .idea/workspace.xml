@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="" />
+    <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/NativeHandle.js" afterPath="$PROJECT_DIR$/NativeHandle.js" />
+      <change beforePath="$PROJECT_DIR$/navigatior.js" afterPath="$PROJECT_DIR$/navigatior.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -52,12 +56,19 @@
       <file leaf-file-name="NativeHandle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NativeHandle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-479">
-              <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+            <state relative-caret-position="162">
+              <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
               <folding>
-                <element signature="e#70#202#0" expanded="false" />
-                <element signature="e#237#1156#0" expanded="false" />
-                <element signature="e#1190#1447#0" expanded="false" />
+                <element signature="e#71#203#0" expanded="false" />
+                <element signature="e#239#1161#0" expanded="false" />
+                <element signature="e#1204#1553#0" expanded="false" />
+                <element signature="e#1587#1844#0" expanded="false" />
+                <element signature="e#1890#3158#0" expanded="false" />
+                <element signature="e#3203#3395#0" expanded="false" />
+                <element signature="e#3438#3482#0" expanded="false" />
+                <element signature="e#3564#3796#0" expanded="false" />
+                <element signature="e#3837#4177#0" expanded="false" />
+                <element signature="e#4217#4760#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,13 +77,9 @@
       <file leaf-file-name="navigatior.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/navigatior.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-              <folding>
-                <element signature="e#1606#1905#0" expanded="false" />
-                <element signature="e#2007#2014#0" expanded="false" />
-                <element signature="e#2065#2100#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="-1468">
+              <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -98,11 +105,13 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>app_pop</find>
       <find>cache_result_back_queuecache_result_back_queue</find>
       <find>remove</find>
       <find>StorageEvent</find>
       <find>for</find>
+      <find>app_execute</find>
+      <find>app_pop</find>
+      <find>app_push</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -114,12 +123,12 @@
         <option value="$PROJECT_DIR$/trunk.sh" />
         <option value="$PROJECT_DIR$/update.sh" />
         <option value="$PROJECT_DIR$/cache.js" />
-        <option value="$PROJECT_DIR$/navigatior.js" />
         <option value="$PROJECT_DIR$/native.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/storage.js" />
         <option value="$PROJECT_DIR$/NativeHandle.js" />
+        <option value="$PROJECT_DIR$/navigatior.js" />
       </list>
     </option>
   </component>
@@ -220,12 +229,12 @@
       <updated>1523327456090</updated>
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
-      <workItem from="1523427694183" duration="15970000" />
+      <workItem from="1523427694183" duration="16726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29642000" />
+    <option name="totallyTimeSpent" value="30398000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -314,11 +323,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="80" column="32" lean-forward="false" selection-start-line="80" selection-start-column="32" selection-end-line="80" selection-end-column="32" />
-          <folding>
-            <element signature="e#1606#1905#0" expanded="false" />
-            <element signature="e#2007#2014#0" expanded="false" />
-            <element signature="e#2065#2100#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -347,11 +352,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-          <folding>
-            <element signature="e#1606#1905#0" expanded="false" />
-            <element signature="e#2007#2014#0" expanded="false" />
-            <element signature="e#2065#2100#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -442,25 +443,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NativeHandle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-479">
-          <caret line="50" column="42" lean-forward="true" selection-start-line="50" selection-start-column="42" selection-end-line="50" selection-end-column="42" />
+        <state relative-caret-position="162">
+          <caret line="40" column="40" lean-forward="false" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="40" />
           <folding>
-            <element signature="e#70#202#0" expanded="false" />
-            <element signature="e#237#1156#0" expanded="false" />
-            <element signature="e#1190#1447#0" expanded="false" />
+            <element signature="e#71#203#0" expanded="false" />
+            <element signature="e#239#1161#0" expanded="false" />
+            <element signature="e#1204#1553#0" expanded="false" />
+            <element signature="e#1587#1844#0" expanded="false" />
+            <element signature="e#1890#3158#0" expanded="false" />
+            <element signature="e#3203#3395#0" expanded="false" />
+            <element signature="e#3438#3482#0" expanded="false" />
+            <element signature="e#3564#3796#0" expanded="false" />
+            <element signature="e#3837#4177#0" expanded="false" />
+            <element signature="e#4217#4760#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/navigatior.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1764">
-          <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <element signature="e#1606#1905#0" expanded="false" />
-            <element signature="e#2007#2014#0" expanded="false" />
-            <element signature="e#2065#2100#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="-1468">
+          <caret line="0" column="23" lean-forward="false" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
