@@ -17,7 +17,7 @@ var native = function (source, version, wp) {
 }
 
 native.prototype.navigatior = null;
-// native.prototype.network = network;
+native.prototype.network = null;
 native.prototype.cache = null;
-native.prototype.web = web;
+native.prototype.web = null;
 native.prototype.app = null;
