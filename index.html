@@ -19,9 +19,7 @@
 
 <body>
 <script src="vconsole.min.js"></script>
-<script>
-    new VConsole();
-</script>
+<script> new VConsole(); </script>
 <script type="text/javascript" src="NativeHandle.js"></script>
 <script type="text/javascript" src="navigatior.js"></script>
 <script type="text/javascript" src="app.js"></script>
@@ -55,17 +53,17 @@
         })
     }
 </script>
-<div>
-    <div class="btn" onclick="pop()">navigatior: pop</div>
-    <div class="btn" onclick="pop(-1)">navigatior: pop(-1)</div>
-    <div class="btn" onclick="pop(-999)">navigatior: pop(-999)</div>
-    <div class="btn" onclick="pop(1)">navigatior: pop(1)</div>
-    <div class="btn" onclick="pop(0)">navigatior: pop(0)</div>
-    <div class="btn" onclick="pop('home')">navigatior: pop('home')</div>
-    <div class="btn" onclick="show()">navigatior: show('sp://home/home')</div>
-    <div class="btn" onclick="show(true)">navigatior: show('sp://home/home',{isRemoveSelf: true})</div>
-    <div class="btn" onclick="backlist()">navigatior: backlist()</div>
-</div>
+<!--<div>-->
+    <!--<div class="btn" onclick="pop()">navigatior: pop</div>-->
+    <!--<div class="btn" onclick="pop(-1)">navigatior: pop(-1)</div>-->
+    <!--<div class="btn" onclick="pop(-999)">navigatior: pop(-999)</div>-->
+    <!--<div class="btn" onclick="pop(1)">navigatior: pop(1)</div>-->
+    <!--<div class="btn" onclick="pop(0)">navigatior: pop(0)</div>-->
+    <!--<div class="btn" onclick="pop('home')">navigatior: pop('home')</div>-->
+    <!--<div class="btn" onclick="show()">navigatior: show('sp://home/home')</div>-->
+    <!--<div class="btn" onclick="show(true)">navigatior: show('sp://home/home',{isRemoveSelf: true})</div>-->
+    <!--<div class="btn" onclick="backlist()">navigatior: backlist()</div>-->
+<!--</div>-->
 
 <!--cache-->
 <script>
@@ -90,6 +88,7 @@
 
 <!--app-->
 <script>
+
     function app_open() {
         native.app.open('tel://18825031078')
     }
@@ -111,7 +110,7 @@
             url: 'http://www.baidu.com'
         };
 
-        native.app.share(data,function (value) {
+        native.app.share(data, function (value) {
             alert(JSON.stringify(value))
         })
     }
