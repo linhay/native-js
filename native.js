@@ -309,7 +309,7 @@ app.prototype.pay = function (type, data) {
                 wechat.timestamp = data.timestamp + '';
                 wechat.package = data.package;
                 wechat.sign = data.sign;
-                Native.bridge_for_1('pay', { url: url });
+                Native.bridge_for_1('pay', { wechat: wechat });
                 return;
             }
 

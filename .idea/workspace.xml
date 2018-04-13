@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/source/navigatior.js" afterPath="$PROJECT_DIR$/source/navigatior.js" />
+      <change beforePath="$PROJECT_DIR$/source/app.js" afterPath="$PROJECT_DIR$/source/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,7 +52,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navigatior.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navigatior.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/source/navigatior.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
@@ -82,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/source/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="100" column="48" lean-forward="true" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+            <state relative-caret-position="266">
+              <caret line="104" column="58" lean-forward="false" selection-start-line="104" selection-start-column="58" selection-end-line="104" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -149,10 +149,10 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/combiner.sh" />
         <option value="$PROJECT_DIR$/source/life.js" />
-        <option value="$PROJECT_DIR$/source/app.js" />
         <option value="$PROJECT_DIR$/source/NativeHandle.js" />
         <option value="$PROJECT_DIR$/source/native.js" />
         <option value="$PROJECT_DIR$/source/navigatior.js" />
+        <option value="$PROJECT_DIR$/source/app.js" />
       </list>
     </option>
   </component>
@@ -265,12 +265,12 @@
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
       <workItem from="1523427694183" duration="36956000" />
-      <workItem from="1523587151668" duration="1422000" />
+      <workItem from="1523587151668" duration="1541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52050000" />
+    <option name="totallyTimeSpent" value="52169000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,14 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/source/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="100" column="48" lean-forward="true" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/source/NativeHandle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-445">
@@ -614,6 +606,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="104" column="58" lean-forward="false" selection-start-line="104" selection-start-column="58" selection-end-line="104" selection-end-column="58" />
           <folding />
         </state>
       </provider>
