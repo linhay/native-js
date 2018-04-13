@@ -17,14 +17,6 @@ var native = function (source, version, wp) {
     this.web = new web();
     this.network = new network();
     this.life = new life();
-    if ((wp) && wp < 2000) {
-        var data = {};
-        data.isHiddenNavbar = 1;
-        data.isHiddenLoadAnimation = 1;
-        Native.bridge_for_1('ui', data);
-    }else {
-        Native.post('sp://web/config?version' + wp);
-    }
 };
 
 
