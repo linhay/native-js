@@ -584,8 +584,10 @@ var native = function native(source, version, wp) {
 native.prototype.init = function () {
     if (native_config.wp && native_config.wp < 2000) {
         var data = {};
+        data.url = 'http://t/t';
         data.isHiddenNavbar = 1;
         data.isHiddenLoadAnimation = 1;
+        data.navbarItems = [];
         Native.bridge_for_1('ui', data);
     } else {
         Native.post('sp://web/config?version' + wp);
