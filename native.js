@@ -210,9 +210,9 @@ var Native = {
     }
 
 };
-var app = function app() {};
+var _native_app = function _native_app() {};
 
-app.prototype.open = function (url) {
+_native_app.prototype.open = function (url) {
     if (native_config.wp < 2000) {
         Native.bridge_for_1('open', { url: url });
         return;
@@ -237,7 +237,7 @@ app.prototype.open = function (url) {
         "aoiName": 'aoi'
         }
 * */
-app.prototype.location = function (cb) {
+_native_app.prototype.location = function (cb) {
     if (native_config.wp < 2000) {
         var list = ['location'];
         _cache_result_req_queue = list;
@@ -269,7 +269,7 @@ app.prototype.location = function (cb) {
         wx_path: String   // 微信小程序页面路径 1.8.0+
         url: String       // 链接
 * */
-app.prototype.share = function (params, cb) {
+_native_app.prototype.share = function (params, cb) {
     if (native_config.wp < 2000) {
         Native.bridge_for_1('share', params);
         return;
@@ -277,7 +277,7 @@ app.prototype.share = function (params, cb) {
     Native.post('sp://app/share', params, cb);
 };
 
-app.prototype.pay = function (type, data) {
+_native_app.prototype.pay = function (type, data) {
 
     if (type === 'wechat') {
         type = 1;
@@ -504,29 +504,29 @@ app.prototype.pay = function (type, data) {
     return { Base64: global.Base64 };
 });
 
-var life = function life() {
+var _native_life = function _native_life() {
     this.enterBackground();
 };
 
-life.prototype.enterForeground = function (cb) {
+_native_life.prototype.enterForeground = function (cb) {
     var name = 'enterForeground';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
 };
 
-life.prototype.enterBackground = function (cb) {
+_native_life.prototype.enterBackground = function (cb) {
     var name = 'enterBackground';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
 };
 
-life.prototype.backFromNative = function (cb) {
+_native_life.prototype.backFromNative = function (cb) {
     var name = 'backFromNative';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
 };
 
-life.prototype.backFromWeb = function (cb) {
+_native_life.prototype.backFromWeb = function (cb) {
     var name = 'backFromWeb';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
@@ -572,12 +572,12 @@ var native = function native(source, version, wp) {
         version: version
     };
     Native.source = source;
-    this.navigatior = new nav();
-    this.cache = new storage();
-    this.app = new app();
-    this.web = new web();
-    this.network = new network();
-    this.life = new life();
+    this.navigatior = new _native_nav();
+    this.cache = new _native_storage();
+    this.app = new _native_app();
+    this.web = new _native_web();
+    this.network = new _native_network();
+    this.life = new _native_life();
     this.init();
 };
 
@@ -599,7 +599,7 @@ native.prototype.network = null;
 native.prototype.cache = null;
 native.prototype.web = null;
 native.prototype.app = null;
-native.prototype.life = null;var nav = function nav() {};
+native.prototype.life = null;var _native_nav = function _native_nav() {};
 
 /* 回退至指定app页面
 *  value: 可缺省 | 指定页面名称 | 回退层数
@@ -609,7 +609,7 @@ native.prototype.life = null;var nav = function nav() {};
 *       pop('home')
 *       pop(-2)
 *  */
-nav.prototype.pop = function (value) {
+_native_nav.prototype.pop = function (value) {
 
     // 1.x 会推至第一层兼容函数
     function special(index) {
@@ -672,7 +672,7 @@ nav.prototype.pop = function (value) {
 *           value = ['tabbar','message'];
 *       })
 * */
-nav.prototype.backList = function (cb) {
+_native_nav.prototype.backList = function (cb) {
     if (native_config.wp < 2000) throw "该版本不支持 backList";
     Native.post('sp://navigatior/backList', cb);
 };
@@ -686,7 +686,7 @@ nav.prototype.backList = function (cb) {
 *       show('sp://home/home',{isRemoveSelf: 0})
 *       show('sp://home/home')
 * */
-nav.prototype.show = function (url, params) {
+_native_nav.prototype.show = function (url, params) {
 
     var data = {};
     url = url.replace('sp://', 'http://');
@@ -704,15 +704,15 @@ nav.prototype.show = function (url, params) {
         // 2.x 代码
         Native.post('sp://navigatior/show', data);
     }
-};var network = function network() {};
+};var _native_network = function _native_network() {};
 
-network.prototype.post = function (params, cb) {
+_native_network.prototype.post = function (params, cb) {
     Native.post("sp://network/post", params, cb);
 };
 
-var storage = function storage() {};
+var _native_storage = function _native_storage() {};
 
-storage.prototype.get = function (list, cb) {
+_native_storage.prototype.get = function (list, cb) {
     // 1.x 代码
     if (native_config.wp < 2000) {
         _cache_result_req_queue = list;
@@ -738,7 +738,7 @@ storage.prototype.get = function (list, cb) {
     Native.post('sp://cache/get', { list: JSON.stringify(list) }, cb);
 };
 
-storage.prototype.set = function (key, value, cb) {
+_native_storage.prototype.set = function (key, value, cb) {
     // 1.x 代码
     if (native_config.wp < 2000) {
         var body = {
@@ -771,15 +771,15 @@ function cacheResult(name, value) {
     var name = JSON.stringify(_cache_result_req_queue);
     NativeEvent.fireEvent(name, _cache_result_back_queue);
 }
-var web = function web() {};
+var _native_web = function _native_web() {};
 
 // 发送当前使用版本号
-web.prototype.sendVersion = function (version, cb) {
+_native_web.prototype.sendVersion = function (version, cb) {
     Native.post('sp://web/config', { version: version }, cb);
 };
 
 // 与原生返回按键效果一致
-web.prototype.goback = function (jsStr, cb) {
+_native_web.prototype.goback = function (jsStr, cb) {
     if (native_config.wp < 2000) {
         window.history.back();
         return;
@@ -788,16 +788,16 @@ web.prototype.goback = function (jsStr, cb) {
 };
 
 // 获取可回退web页面列表
-web.prototype.backList = function (cb) {
+_native_web.prototype.backList = function (cb) {
     Native.post('sp://web/backList', cb);
 };
 
 // 获取可前进web页面列表
-web.prototype.forwardList = function (cb) {
+_native_web.prototype.forwardList = function (cb) {
     Native.post('sp://web/forwardList', cb);
 };
 
 // 跳转至指定web页面[依旧触发生命周期函数]
-web.prototype.go = function (index, cb) {
+_native_web.prototype.go = function (index, cb) {
     Native.post('sp://web/go', { index: index }, cb);
 };

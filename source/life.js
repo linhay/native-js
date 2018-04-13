@@ -1,26 +1,26 @@
-var life = function () {
+var _native_life = function () {
     this.enterBackground()
 };
 
-life.prototype.enterForeground = function (cb) {
+_native_life.prototype.enterForeground = function (cb) {
     var name = 'enterForeground';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
 };
 
-life.prototype.enterBackground = function (cb) {
+_native_life.prototype.enterBackground = function (cb) {
     var name = 'enterBackground';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
 };
 
-life.prototype.backFromNative = function (cb) {
+_native_life.prototype.backFromNative = function (cb) {
     var name = 'backFromNative';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);
 };
 
-life.prototype.backFromWeb = function (cb) {
+_native_life.prototype.backFromWeb = function (cb) {
     var name = 'backFromWeb';
     NativeEvent.removeEvent(name);
     NativeEvent.addEvent(name, cb);

@@ -1,8 +1,8 @@
-var app = function () {
+var _native_app = function () {
 };
 
 
-app.prototype.open = function (url) {
+_native_app.prototype.open = function (url) {
     if (native_config.wp < 2000) {
         Native.bridge_for_1('open', {url: url});
         return;
@@ -27,7 +27,7 @@ app.prototype.open = function (url) {
         "aoiName": 'aoi'
         }
 * */
-app.prototype.location = function (cb) {
+_native_app.prototype.location = function (cb) {
     if (native_config.wp < 2000) {
         var list = ['location'];
         _cache_result_req_queue = list;
@@ -59,7 +59,7 @@ app.prototype.location = function (cb) {
         wx_path: String   // 微信小程序页面路径 1.8.0+
         url: String       // 链接
 * */
-app.prototype.share = function (params, cb) {
+_native_app.prototype.share = function (params, cb) {
     if (native_config.wp < 2000) {
         Native.bridge_for_1('share', params);
         return;
@@ -67,7 +67,7 @@ app.prototype.share = function (params, cb) {
     Native.post('sp://app/share', params, cb);
 };
 
-app.prototype.pay = function (type, data) {
+_native_app.prototype.pay = function (type, data) {
 
     if (type === 'wechat') {
         type = 1;

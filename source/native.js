@@ -11,12 +11,12 @@ var native = function (source, version, wp) {
         version: version
     };
     Native.source = source;
-    this.navigatior = new nav();
-    this.cache = new storage();
-    this.app = new app();
-    this.web = new web();
-    this.network = new network();
-    this.life = new life();
+    this.navigatior = new _native_nav();
+    this.cache = new _native_storage();
+    this.app = new _native_app();
+    this.web = new _native_web();
+    this.network = new _native_network();
+    this.life = new _native_life();
     this.init();
 };
 

@@ -1,4 +1,4 @@
-var nav = function () {
+var _native_nav = function () {
 };
 
 /* 回退至指定app页面
@@ -9,7 +9,7 @@ var nav = function () {
 *       pop('home')
 *       pop(-2)
 *  */
-nav.prototype.pop = function (value) {
+_native_nav.prototype.pop = function (value) {
 
     // 1.x 会推至第一层兼容函数
     function special(index) {
@@ -73,7 +73,7 @@ nav.prototype.pop = function (value) {
 *           value = ['tabbar','message'];
 *       })
 * */
-nav.prototype.backList = function (cb) {
+_native_nav.prototype.backList = function (cb) {
     if (native_config.wp < 2000) throw "该版本不支持 backList";
     Native.post('sp://navigatior/backList', cb)
 };
@@ -87,7 +87,7 @@ nav.prototype.backList = function (cb) {
 *       show('sp://home/home',{isRemoveSelf: 0})
 *       show('sp://home/home')
 * */
-nav.prototype.show = function (url, params) {
+_native_nav.prototype.show = function (url, params) {
 
     var data = {};
     url = url.replace('sp://', 'http://');

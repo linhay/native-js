@@ -1,7 +1,7 @@
-var storage = function () {
+var _native_storage = function () {
 };
 
-storage.prototype.get = function (list, cb) {
+_native_storage.prototype.get = function (list, cb) {
     // 1.x 代码
     if (native_config.wp < 2000) {
         _cache_result_req_queue = list;
@@ -27,7 +27,7 @@ storage.prototype.get = function (list, cb) {
     Native.post('sp://cache/get', {list: JSON.stringify(list)}, cb)
 };
 
-storage.prototype.set = function (key, value, cb) {
+_native_storage.prototype.set = function (key, value, cb) {
     // 1.x 代码
     if (native_config.wp < 2000) {
         var body = {
