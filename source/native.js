@@ -21,7 +21,7 @@ var native = function (source, version, wp) {
         var data = {};
         data.isHiddenNavbar = 1;
         data.isHiddenLoadAnimation = 1;
-        // Native.bridge_for_1('ui', data);
+        Native.bridge_for_1('ui', data);
     }else {
         Native.post('sp://web/config?version' + wp);
     }
