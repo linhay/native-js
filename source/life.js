@@ -26,7 +26,7 @@ life.prototype.backFromWeb = function (cb) {
     NativeEvent.addEvent(name, cb);
 };
 
-
+/* 2.0 life */
 function enterForeground() {
     NativeEvent.fireEvent('enterForeground');
 };
@@ -42,3 +42,16 @@ function backFromNative() {
 function backFromWeb() {
     NativeEvent.fireEvent('backFromWeb');
 };
+
+
+/* 1.0 life */
+function didAppear() {
+    if (Native.isEnterNative) {
+        Native.isEnterNative = false;
+        NativeEvent.fireEvent('backFromNative');
+    }
+}
+
+function webDidAppear() {
+    NativeEvent.fireEvent('backFromWeb');
+}

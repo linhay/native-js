@@ -85,7 +85,10 @@ var Native = {
         };
     },
 
+    isEnterNative: false,
+
     bridge_for_1: function bridge_for_1(name, body) {
+        if (name == 'push') this.isEnterNative = true;
         if (0 == this.source) {
             switch (name) {
                 case 'push':
@@ -529,6 +532,7 @@ life.prototype.backFromWeb = function (cb) {
     NativeEvent.addEvent(name, cb);
 };
 
+/* 2.0 life */
 function enterForeground() {
     NativeEvent.fireEvent('enterForeground');
 };
@@ -543,7 +547,19 @@ function backFromNative() {
 
 function backFromWeb() {
     NativeEvent.fireEvent('backFromWeb');
-};var native_config = {
+};
+
+/* 1.0 life */
+function didAppear() {
+    if (Native.isEnterNative) {
+        Native.isEnterNative = false;
+        NativeEvent.fireEvent('backFromNative');
+    }
+}
+
+function webDidAppear() {
+    NativeEvent.fireEvent('backFromWeb');
+}var native_config = {
     source: -1,
     wp: -1,
     version: -1
@@ -561,20 +577,21 @@ var native = function native(source, version, wp) {
     this.app = new app();
     this.web = new web();
     this.network = new network();
-
-    // if ((wp) && wp < 2000){
-    //     Native.bridge_for_1('ui', {
-    //         isHiddenNavbar: 1,
-    //         isHiddenLoadAnimation: 1
-    //     });
-    // }
+    this.life = new life();
+    if (wp && wp < 2000) {
+        Native.bridge_for_1('ui', {
+            isHiddenNavbar: 1,
+            isHiddenLoadAnimation: 1
+        });
+    }
 };
 
 native.prototype.navigatior = null;
 native.prototype.network = null;
 native.prototype.cache = null;
 native.prototype.web = null;
-native.prototype.app = null;var nav = function nav() {};
+native.prototype.app = null;
+native.prototype.life = null;var nav = function nav() {};
 
 /* 回退至指定app页面
 *  value: 可缺省 | 指定页面名称 | 回退层数

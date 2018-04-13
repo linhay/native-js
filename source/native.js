@@ -16,13 +16,13 @@ var native = function (source, version, wp) {
     this.app = new app();
     this.web = new web();
     this.network = new network();
-
-    // if ((wp) && wp < 2000){
-    //     Native.bridge_for_1('ui', {
-    //         isHiddenNavbar: 1,
-    //         isHiddenLoadAnimation: 1
-    //     });
-    // }
+    this.life = new life();
+    if ((wp) && wp < 2000) {
+        Native.bridge_for_1('ui', {
+            isHiddenNavbar: 1,
+            isHiddenLoadAnimation: 1
+        });
+    }
 };
 
 
@@ -31,3 +31,4 @@ native.prototype.network = null;
 native.prototype.cache = null;
 native.prototype.web = null;
 native.prototype.app = null;
+native.prototype.life = null;
