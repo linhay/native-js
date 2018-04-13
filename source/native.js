@@ -29,7 +29,7 @@ native.prototype.init = function () {
         data.navbarItems = [];
         Native.bridge_for_1('ui', data);
     }else {
-        Native.post('sp://web/config?version' + wp);
+        Native.post('sp://web/config?version' + native_config.wp);
     }
 };
 
