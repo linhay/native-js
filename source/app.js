@@ -79,16 +79,34 @@ app.prototype.pay = function (type, data) {
 
     if (native_config.wp < 2000) {
         if (type === 1) {
-            var url = 'weixin://app/' + data.appid + '/pay/?';
-            url += 'nonceStr=' + data.noncestr;
-            url += '&package=' + encodeURIComponent(data.package);
-            url += '&partnerId=' + data.partnerid;
-            url += '&prepayId=' + data.prepayid;
-            url += '&timeStamp=' + data.timestamp;
-            url += '&sign=' + data.sign;
-            url += '&signType=SHA1';
-            Native.bridge_for_1('open', {url: url});
-            return;
+
+            if (native_config.source == 0) {
+                var url = 'weixin://app/' + data.appid + '/pay/?';
+                url += 'nonceStr=' + data.noncestr;
+                url += '&package=' + encodeURIComponent(data.package);
+                url += '&partnerId=' + data.partnerid;
+                url += '&prepayId=' + data.prepayid;
+                url += '&timeStamp=' + data.timestamp;
+                url += '&sign=' + data.sign;
+                url += '&signType=SHA1';
+                Native.bridge_for_1('open', {url: url});
+                return;
+            }
+
+            if (native_config.source == 1) {
+                var wechat = {};
+                wechat.appid = data.appid;
+                wechat.partnerid = data.partnerid;
+                wechat.prepayid = data.prepayid;
+                wechat.noncestr = data.noncestr;
+                wechat.timestamp = data.timestamp + '';
+                wechat.package = data.package;
+                wechat.sign = data.sign;
+                Native.bridge_for_1('pay', {url: url});
+                return;
+            }
+
+            throw '无法识别的来源';
         }
         if (type === 2) {
             var json = {};

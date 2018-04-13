@@ -90,6 +90,7 @@ nav.prototype.backList = function (cb) {
 nav.prototype.show = function (url, params) {
 
     var data = {};
+    url = url.replace('sp://', 'http://');
     if (params) {
         params.url = url;
         data = params;
