@@ -22,6 +22,8 @@ var native = function (source, version, wp) {
             isHiddenNavbar: 1,
             isHiddenLoadAnimation: 1
         });
+    }else {
+        Native.post('sp://web/config?version' + wp);
     }
 };
 
