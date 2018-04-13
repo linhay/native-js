@@ -594,7 +594,7 @@ nav.prototype.pop = function (value) {
             return;
         }
 
-        if (0 == native_config.source) {
+        if (1 == native_config.source) {
             data = {};
             data.url = "http://" + value + "/" + value;
             Native.bridge_for_1('push', data);
