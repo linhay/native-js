@@ -559,12 +559,12 @@ var native = function native(source, version, wp) {
     this.web = new web();
     this.network = new network();
 
-    if (wp && wp < 2000) {
-        Native.bridge_for_1('ui', {
-            isHiddenNavbar: 1,
-            isHiddenLoadAnimation: 1
-        });
-    }
+    // if ((wp) && wp < 2000){
+    //     Native.bridge_for_1('ui', {
+    //         isHiddenNavbar: 1,
+    //         isHiddenLoadAnimation: 1
+    //     });
+    // }
 };
 
 native.prototype.navigatior = null;
