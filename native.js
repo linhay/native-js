@@ -88,9 +88,6 @@ var Native = {
     isEnterNative: false,
 
     bridge_for_1: function bridge_for_1(name, body) {
-        alert(this.source);
-        alert(name);
-        alert(JSON.stringify(body));
         if (name == 'push') this.isEnterNative = true;
         if (0 == this.source) {
             switch (name) {
@@ -128,6 +125,9 @@ var Native = {
         }
 
         if (1 == this.source) {
+            alert(this.source);
+            alert(name);
+            alert(JSON.stringify(body));
             myWeb.postMessage(name, JSON.stringify(body));
             return;
         }
@@ -581,6 +581,15 @@ var native = function native(source, version, wp) {
     this.web = new web();
     this.network = new network();
     this.life = new life();
+
+    if (wp && wp < 2000) {
+        var data = {};
+        data.isHiddenNavbar = 1;
+        data.isHiddenLoadAnimation = 1;
+        Native.bridge_for_1('ui', data);
+    } else {
+        Native.post('sp://web/config?version' + wp);
+    }
 };
 
 native.prototype.navigatior = null;
