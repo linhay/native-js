@@ -118,9 +118,9 @@ _native_app.prototype.pay = function (type, data) {
             Native.bridge_for_1('pay', json);
             return;
         }
+        throw 'soruce 无法识别';
     }
 
-    data = data.data;
     data.type = type;
     Native.post('sp://app/pay', data);
 };
