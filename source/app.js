@@ -96,10 +96,10 @@ app.prototype.pay = function (type, data) {
             if (native_config.source == 1) {
                 var wechat = {};
                 wechat.appid = data.appid;
-                wechat.partnerid = data.partnerid;
-                wechat.prepayid = data.prepayid;
-                wechat.noncestr = data.noncestr;
-                wechat.timestamp = data.timestamp + '';
+                wechat.partnerId = data.partnerid;
+                wechat.prepayId = data.prepayid;
+                wechat.nonceStr = data.noncestr;
+                wechat.timeStamp = data.timestamp + '';
                 wechat.package = data.package;
                 wechat.sign = data.sign;
                 Native.bridge_for_1('pay', {wechat: wechat});
