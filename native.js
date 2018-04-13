@@ -174,7 +174,7 @@ var Native = {
             new_url = "sp://" + urlObject.host + urlObject.path + "?data=" + value1;
         } else if (1 == this.source) {
             // Android合并url
-            new_url = "sp:" + urlObject.path + "?data=" + dataObject;
+            new_url = "sp:" + urlObject.path + "?data=" + value1;
         } else {
             throw "无法识别的来源";
         }
