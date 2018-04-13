@@ -41,6 +41,9 @@ var Native = {
     isEnterNative: false,
 
     bridge_for_1: function (name, body) {
+        alert(this.source);
+        alert(name);
+        alert(JSON.stringify(body));
         if (name == 'push') this.isEnterNative = true;
         if (0 == this.source) {
             switch (name) {
