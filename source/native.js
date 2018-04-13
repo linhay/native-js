@@ -28,9 +28,12 @@ native.prototype.init = function () {
         data.isHiddenLoadAnimation = 1;
         data.navbarItems = [];
         Native.bridge_for_1('ui', data);
-    }else {
+    }
+
+    if ((native_config.wp) && native_config.wp > 2000) {
         Native.post('sp://web/config?version' + native_config.wp);
     }
+
 };
 
 native.prototype.navigatior = null;
