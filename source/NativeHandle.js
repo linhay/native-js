@@ -78,9 +78,6 @@ var Native = {
         }
 
         if (1 == this.source) {
-            alert(this.source);
-            alert(name);
-            alert(JSON.stringify(body));
             myWeb.postMessage(name, JSON.stringify(body));
             return;
         }

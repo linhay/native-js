@@ -125,9 +125,6 @@ var Native = {
         }
 
         if (1 == this.source) {
-            alert(this.source);
-            alert(name);
-            alert(JSON.stringify(body));
             myWeb.postMessage(name, JSON.stringify(body));
             return;
         }
@@ -581,8 +578,11 @@ var native = function native(source, version, wp) {
     this.web = new web();
     this.network = new network();
     this.life = new life();
+    this.init();
+};
 
-    if (wp && wp < 2000) {
+native.prototype.init = function () {
+    if (native_config.wp && native_config.wp < 2000) {
         var data = {};
         data.isHiddenNavbar = 1;
         data.isHiddenLoadAnimation = 1;
