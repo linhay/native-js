@@ -330,6 +330,7 @@ _native_app.prototype.pay = function (type, data) {
         }
     }
 
+    data = data.data;
     data.type = type;
     Native.post('sp://app/pay', data);
 }; /*
