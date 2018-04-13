@@ -17,10 +17,11 @@ var native = function (source, version, wp) {
     this.web = new _native_web();
     this.network = new _native_network();
     this.life = new _native_life();
-    this.init();
+    // this.init();
 };
 
 native.prototype.init = function () {
+
     if ((native_config.wp) && native_config.wp < 2000) {
         var data = {};
         data.url = 'http://t/t';
