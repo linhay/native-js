@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cce72ce2-19ff-4ed6-99cf-0c779855b464" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/source/native.js" afterPath="$PROJECT_DIR$/source/native.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -274,12 +274,12 @@
       <workItem from="1523327459259" duration="8894000" />
       <workItem from="1523346054485" duration="4778000" />
       <workItem from="1523427694183" duration="36956000" />
-      <workItem from="1523587151668" duration="6177000" />
+      <workItem from="1523587151668" duration="6202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56805000" />
+    <option name="totallyTimeSpent" value="56830000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
