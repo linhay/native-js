@@ -24,7 +24,7 @@ _native_storage.prototype.get = function (list, cb) {
         return;
     }
     //2.x 代码
-    Native.post('sp://cache/get', {list: JSON.stringify(list)}, cb)
+    Native.post('sp://cache/get', {list: list}, cb)
 };
 
 _native_storage.prototype.set = function (key, value, cb) {
