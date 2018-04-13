@@ -24,7 +24,7 @@ nav.prototype.pop = function (value) {
 
         if (0 == native_config.source) {
             data = {};
-            data.url = "sp://" + value + "/" + value;
+            data.url = "http://" + value + "/" + value;
             Native.bridge_for_1('push', data);
         }
     }
